@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kodavalluri Harsha - Resume</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f8;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    body.dark-mode {
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+    }
+
+    .resume-container {
+      background-color: #ffffff;
+      max-width: 900px;
+      width: 100%;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      color: #333;
+    }
+
+    body.dark-mode .resume-container {
+      background-color: #2c2c2c;
+      color: #f0f0f0;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .profile-pic {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ddd;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: bold;
+      color: #2e86de;
+    }
+
+    body.dark-mode h1, body.dark-mode h2 {
+      color: #66b2ff;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      margin-left: 20px;
+      line-height: 1.7;
+    }
+
+    p, li {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #2e86de;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 15px;
+      background-color: #2e86de;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    body.dark-mode .theme-toggle {
+      background-color: #ffffff;
+      color: #2e86de;
+    }
+
+    .contact-info {
+      font-size: 14px;
+      color: #555;
+    }
+
+    body.dark-mode .contact-info {
+      color: #bbb;
+    }
+
+    @media (max-width: 600px) {
+      .header-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+      }
+
+      .profile-pic {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <div class="header-container">
+      <div>
+        <h1>KODAVALLURI HARSHA</h1>
+        <div class="contact-info">
+          Email: <a href="mailto:harshahari2538@gmail.com">harshahari2538@gmail.com</a><br>
+          Phone: +91 8247533169<br>
+          Location: Ganapavaram, India
+        </div>
+      </div>
+      <img src="harsh.jpg" alt="KODAVALLURI HARSHA" class="profile-pic">
+    </div>
+
+    <h2>About Me</h2>
+    <p>Passionate full-stack developer with strong skills in building dynamic, responsive web applications and exploring emerging technologies.</p>
+
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Languages:</strong> C, Java, Python, JavaScript</li>
+      <li><strong>Web:</strong> HTML, CSS, JavaScript</li>
+      <li><strong>Databases:</strong> MySQL</li>
+      <li><strong>Tools:</strong> VS Code, Jupyter Notebook, GitHub</li>
+    </ul>
+
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Hobby Discovery Platform Website:</strong> A web-based application that helps users discover hobbies based on lifestyle, mood, and time, using HTML, CSS, and JavaScript.</li>
+      <li><strong>Obesity Risk Prediction System:</strong> Machine learning-based model to classify obesity levels using demographic and lifestyle data. Implemented classifiers: Random Forest, SVM, Logistic Regression, and KNN.</li>
+    </ul>
+
+    <h2>Certifications</h2>
+    <ul>
+      <li>Cisco: Introduction to Cybersecurity</li>
+      
+    </ul>
+
+    <h2>Hobbies</h2>
+    <ul>
+      <li>Exploring tech blogs and podcasts</li>
+      <li>Participating in coding competitions</li>
+      <li>Experimenting with AI tools and projects</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>
+      Email: <a href="mailto:harshahari2538@gmail.com">harshahari2538@gmail.com</a><br>
+      GitHub: <a href="github.com/harshakodavalluri" target="_blank">github.com/harshakodavalluri</a><br>
+      LinkedIn: <a href="www.linkedin.com/in/harsha-kodavalluri-022117301" target="_blank">linkedin.com/in/harshakodavalluri</a>
+    </p>
+  </div>
+
+  <button class="theme-toggle" id="themeToggle">Dark Mode</button>
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    const body = document.body;
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      toggleBtn.textContent = body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
+    });
+  </script>
+</body>
+</html>
